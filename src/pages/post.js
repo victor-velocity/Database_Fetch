@@ -25,6 +25,7 @@ const ProfileForm = () => {
 
             const result = await response.json();
             console.log('Inserted Data:', result.data);
+            window.location.href = "/";
         } catch (error) {
             console.error('Error inserting data:', error);
         }

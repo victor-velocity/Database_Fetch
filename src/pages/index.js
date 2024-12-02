@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 export default function Home() {
     const [data, setData] = useState([]);
@@ -30,10 +31,11 @@ export default function Home() {
                         fontSize: '24px',
                         fontWeight: 'bold',
                         color: '#1f2937',
-                        marginBottom: '16px',
+                        marginBottom: '30px',
+                        textAlign: 'center'
                     }}
                 >
-                    Data from PostgreSQL DB
+                    User Data Info
                 </h1>
                 <div style={{ overflowX: 'auto' }}>
                     <table
@@ -70,6 +72,13 @@ export default function Home() {
                             ))}
                         </tbody>
                     </table>
+                    <Link
+                        href= '/post'
+                        >
+                            <p style={{
+                            textAlign: 'center', 
+                            marginTop: '30px'}}>Add User</p>
+                    </Link>
                 </div>
             </div>
         </div>
